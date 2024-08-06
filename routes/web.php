@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ApiController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -20,3 +21,10 @@ Route::middleware([
 
 Route::get('/fetch-sync', [ApiController::class, 'fetchSync']);
 Route::get('/fetch-async', [ApiController::class, 'fetchAsync']);
+
+
+Route::get('import', function () {
+    return view('import');
+});
+
+Route::post('import', [UserController::class, 'import'])->name('users.import');
