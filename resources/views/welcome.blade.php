@@ -11,7 +11,11 @@
 </head>
 
 <body>
-
+    <h1>API Results</h1>
+    <h2>Weather Data:</h2>
+    <pre>{{ print_r($weather, true) }}</pre>
+    <h2>Current Price:</h2>
+    <pre>{{ print_r($currentprice, true) }}</pre>
 </body>
 
 </html>
